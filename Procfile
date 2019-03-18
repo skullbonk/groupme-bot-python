@@ -1,1 +1,1 @@
-web: gunicorn groupme-bot-xo:Bot --log-file -
+web: gunicorn groupme-bot-xo:bot --log-file -
