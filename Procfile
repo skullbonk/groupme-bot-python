@@ -1,1 +1,1 @@
-web: gunicorn groupme-bot-xo:Bot --log-file -
+web: python3 Bot.py
