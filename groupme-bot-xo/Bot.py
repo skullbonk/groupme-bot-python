@@ -12,12 +12,12 @@ request_params = {'token': 'asPGAP0QNdGPnsDC8yoOb0uryWzHqzybrsOCF8nn'}
 while True:
     response = requests.get('https://api.groupme.com/v3/groups/35396592/messages', params=request_params)
     
-    if (response.status_code == 200):
+    if response.status_code == 200:
         response_messages = response.json()['response']['messages']
     
         for message in response_messages:
             print(message['text'])
-            if ('xo' in message):
+            if 'xo' in message['text'] or message['text'] == 'xo':
                 botResponse = 'oi piss off'
                 
                 # send response to the group
