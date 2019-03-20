@@ -23,8 +23,10 @@ def analyze_message(received_message) -> str:
             full_response = 'bet'
     elif 'car' in received_message:
         full_response = 'i used to have a car, but i crashed it on the information highway'
+        
     else:
         full_response = random.choice(generic_responses)
+        
     return full_response
                 
                 
