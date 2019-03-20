@@ -17,7 +17,7 @@ def analyze_message(received_message) -> str:
     
     
     if 'fake' in received_message:
-        if 'not fake' in received_message:
+        if 'not fake' in received_message or 'isn\'t fake' in received_message:
             full_response = 'yeye'
         else:
             full_response = 'bet'
