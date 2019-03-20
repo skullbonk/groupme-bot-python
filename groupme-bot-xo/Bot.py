@@ -17,9 +17,12 @@ def analyze_message(received_message) -> str:
     
     
     if 'fake' in received_message:
-        full_response = 'bet'
+        if 'not fake' in received_message:
+            full_response = 'yeye'
+        else:
+            full_response = 'bet'
     elif 'car' in received_message:
-        full_response = 'i used to have a car, but i crashed it on an information highway'
+        full_response = 'i used to have a car, but i crashed it on the information highway'
     else:
         full_response = random.choice(generic_responses)
     return full_response
@@ -27,12 +30,10 @@ def analyze_message(received_message) -> str:
                 
 def buildBotResponse(sender, message: str) -> str:
     message = message.casefold()
+    bot_response = ''
     if 'xo' in message:
         bot_response = '@' + sender + ' '
         bot_response += analyze_message(message)
-    else:    
-        bot_response = ''
-    
     return bot_response
 
 
@@ -50,6 +51,7 @@ while True:
             print(message['name'], ': ', message['text'])
             
             if message_sender in member_list:
+                
                 to_send = buildBotResponse(message_sender, latest_message)
                 if to_send:
                     # send response to the group
