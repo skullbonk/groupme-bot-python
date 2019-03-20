@@ -27,8 +27,8 @@ while True:
             latestMessage = message['text']
             print(latestMessageSender, ': ', latestMessage)
 
-            if 'xo' or 'Xo' in latestMessage: # if the message is addressed to xo
-                if not latestMessageSender == 'xo-python': # if the message was sent by someone else
+            if 'xo' or 'Xo' in latestMessage:  # if the message is addressed to xo
+                if not latestMessageSender == 'xo-python':  # if the message was sent by someone else
 
                     if 'fake' in message:
                         botResponse = '@' + latestMessageSender + ' '
@@ -39,9 +39,7 @@ while True:
                         botResponse += 'oioi ppppiss off'
             else:
                 botResponse = None
-
-
-            if not botResponse == None:
+            if botResponse is not None:
                 # send response to the group
                 post_params = {'bot_id': '9ac5c52ec5efaee1bce225eb92', 'text': botResponse}
                 requests.post('https://api.groupme.com/v3/bots/post', params=post_params)
