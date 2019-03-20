@@ -7,5 +7,5 @@ Created on Mar 20, 2019
 from os import environ
 from flask import Flask
 
-app = Flask(__name__)
-app.run(environ.get('PORT') or 5000)
+Bot = Flask(__name__)
+Bot.run(environ.get('PORT') or 5000)

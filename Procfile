@@ -1,1 +1,1 @@
-web: python3 groupme-bot-xo/server.py -p $PORT
+web: python3 groupme-bot-xo/Bot.py -p $PORT
