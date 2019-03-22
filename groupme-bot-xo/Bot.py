@@ -16,22 +16,21 @@ member_list = {'chonk', 'Dillon Foster', 'Gayhanderson', 'LABE', 'Rillo notPillo
 
 def analyze_message(sender, received_message) -> str:
     received_message = received_message.casefold()
-    generic_responses = ['m hahahahahahaha', 'aRe yOu GuyS ChAtTiNG wiThOuT mEeE???', 'friggin city slicker']
+    generic_responses = ['m hahahaha', 'aRe yOu GuyS ChAtTiNG wiThOuT mEeE???', 'friggin city slicker', 'ok why would you say that to me', 'it doesn\'t matter', 'are you sure about that']
     tagged_user = ''
     full_response = ''
 
     if 'xo' in received_message:
         tagged_user = '@' + get_nickname(sender) + ' '
-
+        incl_tag = True
         if 'fake' in received_message:
             if 'not fake' in received_message or 'isn\'t fake' in received_message:
-                full_response = 'yeye'
+                full_response = tagged_user + 'yeye'
             else:
-                full_response = 'bet'
-        elif 'car' in received_message:
-            full_response = 'i used to have a car, but i crashed it on the information highway'
+                full_response = tagged_user + 'bet'
 
         if 'nickname' in received_message:
+            incl_tag = False
             for member in member_list:
                 if member in received_message:
                     name_to_nick = member
@@ -39,58 +38,52 @@ def analyze_message(sender, received_message) -> str:
                     name_to_nick = sender
 
             if 'change' or 'set' or 'give' or 'new' in received_message:
-                full_response = add_nickname(name_to_nick)
-            elif 'what' in received_message:
-                for member in member_list:
-                    if member in received_message:
-                        name_to_nick = member
-                    else:
-                        name_to_nick = sender
-                full_response = 'your nickname is ' + get_nickname(name_to_nick)
+                full_response = name_to_nick + '\'s nickname is now ' + add_nickname(name_to_nick)
+
+            elif 'what' and not 'new' in received_message:
+                full_response = name_to_nick + '\'s nickname is ' + get_nickname(name_to_nick)
+
         else:
             full_response = random.choice(generic_responses)
+
     else:
+        incl_tag = False
         if 'smash' in received_message:
-            full_response = 'I\'ll have you know, my wii fit is ranked'
+            smash_responses = ['I\'ll have you know, my wii fit is ranked', 'melee bad', 'i only play brawl', 'you don\'t even know how to wavedash']
+            full_response = random.choice(smash_responses)
 
         if 'hang' in received_message:
-            hang_responses = ['jazz game', 'effing snales', 'gimme 20', 'i\'ll be there in an hour and a half', 'nah i can\'t hang i have weener stuff to be doing instead']
+            hang_responses = ['jazz game', 'effing snales', 'gimme 20', 'i\'ll be there in an hour and a half', 'nah i can\'t hang i have weener stuff to be doing instead', 'will there be girls?']
             full_response = random.choice(hang_responses)
+        if 'car' in received_message:
+            car_response = ['i used to have a car, but i crashed it on the information highway', 'bro i\'m a biker', 'i actually have a turbo in my transmission', 'i can only drive automatics']
+            full_response = random.choice(car_response)
 
-    return tagged_user + full_response
+    if incl_tag:
+        return tagged_user + full_response
+    else:
+        return full_response
 
 
-def add_nickname(sender) -> str:
+def add_nickname(name_to_nick) -> str:
     nick = ''
     with open('nicknames.txt', 'r+') as nicknames_file:
-        nicknames_string = nicknames_file.read()
-        print(nicknames_file.read())
-        if sender in nicknames_string:
+        print(nicknames_file.readlines())
+        if name_to_nick in nicknames_file.readlines():
             for line in nicknames_file:
-                if sender in line:
-                    nick = generate_nickname(sender)
-                    line = sender + ' - ' + nick
-                    nicknames_file.write(line + '\n')
+                if name_to_nick in line:
+                    nick = generate_nickname(name_to_nick)
+                    line = name_to_nick + ' -' + nick
+                    nicknames_file.write(line)
         else:
-            nick = generate_nickname(sender)
-            nicknames_file.write(sender + ' - ' + nick + '\n')
+            nick = generate_nickname(name_to_nick)
+            nicknames_file.write(name_to_nick + ' -' + nick + '\n')
         print(nick)
     return nick
 
 
-
-def get_nickname(sender) -> str:
-    with open('nicknames.txt', 'r') as nicknames_file:
-        for line in nicknames_file:
-            if sender in line:
-                return line.split('-', 1)[1]
-        else:
-            return sender
-
-
-
 def generate_nickname(name_to_nick) -> str:
-    nick_bank_1 = ['Bingle', 'Long', 'Fink', 'Chunk', 'Nut', 'Gonk', 'Lorkus', 'Chungus', 'Bungus', 'Dungus']
+    nick_bank_1 = ['bingle', 'long', 'fink', 'chunk', 'nut', 'gonk', 'lorkus', 'chungus', 'bungus', 'dungus']
     nick_bank_2 = ['ton', 'bun', 'doink', 'dorf', 'florf', 'stein', 'heiny', 'beef', 'wink', 'boi', 'boy', 'town', 'man', 'guy']
     sender_bank = ['bum']
     if name_to_nick == 'chonk':
@@ -109,6 +102,15 @@ def generate_nickname(name_to_nick) -> str:
     prefix = random.choice(sender_bank)
     final_nickname = prefix + random.choice(nick_bank_1) + random.choice(nick_bank_2)
     return final_nickname
+
+
+def get_nickname(sender) -> str:
+    with open('nicknames.txt', 'r') as nicknames_file:
+        for line in nicknames_file:
+            if sender in line:
+                return line.split('-', 1)[1]
+        else:
+            return sender
 
 
 while True:
