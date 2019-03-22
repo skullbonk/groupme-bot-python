@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ecd96e-5e66-488a-a374-bcf1dd956fa1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/groupme-bot-python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/groupme-bot-python.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/groupme-bot-xo/Bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupme-bot-xo/Bot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/groupme-bot-xo/nicknames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/groupme-bot-xo/nicknames.txt" afterDir="false" />
     </list>
@@ -19,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/groupme-bot-xo/Bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="100" column="36" lean-forward="true" selection-start-line="100" selection-start-column="36" selection-end-line="100" selection-end-column="36" />
+            <state relative-caret-position="187">
+              <caret line="96" column="63" lean-forward="true" selection-start-line="96" selection-start-column="63" selection-end-line="96" selection-end-column="63" />
               <folding>
                 <element signature="e#52#65#0" expanded="true" />
               </folding>
@@ -179,8 +176,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/groupme-bot-xo/Bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="100" column="36" lean-forward="true" selection-start-line="100" selection-start-column="36" selection-end-line="100" selection-end-column="36" />
+        <state relative-caret-position="187">
+          <caret line="96" column="63" lean-forward="true" selection-start-line="96" selection-start-column="63" selection-end-line="96" selection-end-column="63" />
           <folding>
             <element signature="e#52#65#0" expanded="true" />
           </folding>

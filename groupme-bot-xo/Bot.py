@@ -46,7 +46,7 @@ def analyze_message(sender, received_message) -> str:
                         name_to_nick = member
                     else:
                         name_to_nick = sender
-                full_response = get_nickname(name_to_nick)
+                full_response = 'your nickname is ' + get_nickname(name_to_nick)
         else:
             full_response = random.choice(generic_responses)
     else:
@@ -69,11 +69,11 @@ def add_nickname(sender) -> str:
             for line in nicknames_file:
                 if sender in line:
                     nick = generate_nickname(sender)
-                    line = sender + '- ' + nick
-                    nicknames_file.writeline()
+                    line = sender + ' - ' + nick
+                    nicknames_file.write(line + '\n')
         else:
             nick = generate_nickname(sender)
-            nicknames_file.write(sender + '-' + nick)
+            nicknames_file.write(sender + ' - ' + nick + '\n')
         print(nick)
     return nick
 
@@ -94,7 +94,7 @@ def generate_nickname(name_to_nick) -> str:
     nick_bank_2 = ['ton', 'bun', 'doink', 'dorf', 'florf', 'stein', 'heiny', 'beef', 'wink', 'boi', 'boy', 'town', 'man', 'guy']
     sender_bank = ['bum']
     if name_to_nick == 'chonk':
-        sender_bank = ['c', 'ch', 'cho', 'chon', 'chonk', 'cheese']
+        sender_bank = ['ch', 'cho', 'chon', 'chonk', 'cheesey']
     if name_to_nick == 'Dillon Foster':
         sender_bank = ['Dill', 'Chilly', 'Fos', 'Dillon']
     if name_to_nick == 'LABE':
