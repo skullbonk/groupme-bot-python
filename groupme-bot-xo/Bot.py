@@ -8,7 +8,7 @@ import string
 import requests
 import time
 import random
-import fileinput
+import fileinput as fi
 
 request_params = {'token': 'asPGAP0QNdGPnsDC8yoOb0uryWzHqzybrsOCF8nn'}
 member_list = {'chonk', 'Dillon Foster', 'Gayhanderson', 'LABE', 'Rillo notPillo', 'Sack', 'Zo'}
@@ -64,21 +64,26 @@ def analyze_message(sender, received_message) -> str:
     else:
         return full_response
 
+# TODO: try making a separate txt file for every member of the group and rewriting it every time someone's nickname is changed
 
 def add_nickname(name_to_nick) -> str:
-    nick = ''
-    with open('nicknames.txt', 'r+') as nicknames_file:
-        print(nicknames_file.readlines())
-        if name_to_nick in nicknames_file.readlines():
-            for line in nicknames_file:
-                if name_to_nick in line:
-                    nick = generate_nickname(name_to_nick)
-                    line = name_to_nick + ' -' + nick
-                    nicknames_file.write(line)
-        else:
-            nick = generate_nickname(name_to_nick)
-            nicknames_file.write(name_to_nick + ' -' + nick + '\n')
-        print(nick)
+    nick = name_to_nick
+    nicknames_read = open('nicknames.txt').readlines()
+    if name_to_nick in nicknames_read:
+        nick = generate_nickname(name_to_nick)
+        with open('nicknames.txt', 'w') as nicknames_write:
+            to_write = ''
+            for line in nicknames_read:
+                if name_to_nick not in line:
+                    to_write += line + '\n'
+            to_write += '\n' + name_to_nick + '-' + nick
+            if to_write:
+                nicknames_write.write(to_write)
+    else:
+        nick = generate_nickname(name_to_nick)
+        with open('nicknames.txt', 'a') as nicknames_append:
+            to_append = '\n' + name_to_nick + '-' + nick
+            nicknames_append.write(to_append)
     return nick
 
 
@@ -87,11 +92,11 @@ def generate_nickname(name_to_nick) -> str:
     nick_bank_2 = ['ton', 'bun', 'doink', 'dorf', 'florf', 'stein', 'heiny', 'beef', 'wink', 'boi', 'boy', 'town', 'man', 'guy']
     sender_bank = ['bum']
     if name_to_nick == 'chonk':
-        sender_bank = ['ch', 'cho', 'chon', 'chonk', 'cheesey']
+        sender_bank = ['ch', 'cho', 'chon', 'chonk', 'chod']
     if name_to_nick == 'Dillon Foster':
         sender_bank = ['Dill', 'Chilly', 'Fos', 'Dillon']
     if name_to_nick == 'LABE':
-        sender_bank = ['La', 'Lab', 'Labe']
+        sender_bank = ['La', 'Labe']
     if name_to_nick == 'Rillo notPillo':
         sender_bank = ['Rill', 'Pill', 'Rillo', 'Pillo', 'not', 'Rop', 'Pop']
     if name_to_nick == 'Sack':
