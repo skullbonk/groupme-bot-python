@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="23ecd96e-5e66-488a-a374-bcf1dd956fa1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/groupme-bot-xo/Bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupme-bot-xo/Bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupme-bot-xo/mostrecentmessage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/groupme-bot-xo/mostrecentmessage.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/groupme-bot-xo/Bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="136" column="64" selection-start-line="136" selection-start-column="64" selection-end-line="136" selection-end-column="64" />
+            <state relative-caret-position="549">
+              <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
               <folding>
                 <element signature="e#52#65#0" expanded="true" />
                 <element signature="e#2050#2292#0" />
@@ -199,7 +198,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2616408" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26940134" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991131" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -256,8 +255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/groupme-bot-xo/Bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="136" column="64" selection-start-line="136" selection-start-column="64" selection-end-line="136" selection-end-column="64" />
+        <state relative-caret-position="549">
+          <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
           <folding>
             <element signature="e#52#65#0" expanded="true" />
             <element signature="e#2050#2292#0" />

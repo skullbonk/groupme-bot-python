@@ -124,6 +124,7 @@ def get_latest_message_id() -> str:
         id = message_index.read()
         return id
 
+# TODO: move message sender test to analyze_message, put message id update there too
 
 while True:
     request_params['since_id'] = get_latest_message_id()
