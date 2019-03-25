@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ecd96e-5e66-488a-a374-bcf1dd956fa1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/groupme-bot-xo/nicknames/Dillon Foster.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groupme-bot-xo/nicknames/Gayhanderson.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groupme-bot-xo/nicknames/LABE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groupme-bot-xo/nicknames/Rillo notPillo.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groupme-bot-xo/nicknames/Sack.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groupme-bot-xo/nicknames/Zo.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groupme-bot-xo/nicknames/chonk.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/groupme-bot-xo/Bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupme-bot-xo/Bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupme-bot-xo/nicknames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/groupme-bot-xo/mostrecentmessage.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupme-bot-xo/mostrecentmessage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/groupme-bot-xo/mostrecentmessage.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/groupme-bot-xo/Bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="331">
+              <caret line="136" column="64" selection-start-line="136" selection-start-column="64" selection-end-line="136" selection-end-column="64" />
               <folding>
                 <element signature="e#52#65#0" expanded="true" />
                 <element signature="e#2050#2292#0" />
@@ -207,8 +199,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26274943" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2616408" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991131" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32961932" />
@@ -240,18 +232,6 @@
     <entry file="file://$PROJECT_DIR$/groupme-bot-xo/nicknames/Rillo notPillo.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/groupme-bot-xo/nicknames/Sack.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/groupme-bot-xo/nicknames/LABE.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/groupme-bot-xo/nicknames/chonk.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/groupme-bot-xo/nicknames/Zo.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -259,13 +239,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/groupme-bot-xo/nicknames/Zo.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/groupme-bot-xo/nicknames/LABE.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/groupme-bot-xo/nicknames/Sack.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/groupme-bot-xo/nicknames/chonk.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/groupme-bot-xo/mostrecentmessage.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/groupme-bot-xo/Bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="331">
+          <caret line="136" column="64" selection-start-line="136" selection-start-column="64" selection-end-line="136" selection-end-column="64" />
           <folding>
             <element signature="e#52#65#0" expanded="true" />
             <element signature="e#2050#2292#0" />

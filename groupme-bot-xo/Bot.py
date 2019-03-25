@@ -134,7 +134,7 @@ while True:
             message_sender = message['name']
             latest_message = message['text']
             message_attachment = message['attachments']
-            print(message['name'], ': ', message['text'])
+            print(message['name'], ': ', message['text'], '| ', message['id'])
 
             if message_sender in member_list:
                 to_send = analyze_message(message_sender, latest_message, message_attachment)
@@ -142,6 +142,7 @@ while True:
                     # send response to the group
                     post_params = {'bot_id': '9ac5c52ec5efaee1bce225eb92', 'text': to_send}
                     requests.post('https://api.groupme.com/v3/bots/post', params=post_params)
+                    print('MESSAGE SENT SUCCESSFULLY | ', to_send)
                     break
             request_params['since_id'] = update_message_index(message)
     time.sleep(5)
