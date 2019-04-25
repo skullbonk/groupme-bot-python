@@ -16,7 +16,7 @@ member_list = {'chonk', 'Dillon Foster', 'Gayhanderson', 'LABE', 'Rillo notPillo
 
 def analyze_message(sender, received_message, message_attachment) -> str:
     received_message = received_message.casefold()
-    generic_responses = ['m', 'aRe yOu GuyS ChAtTiNG wiThOuT mEeE???', 'friggin city slicker', 'ok why would you say that to me', 'it doesn\'t matter', 'are you sure about that', 'don\'t']
+    generic_responses = ['m', 'friggin city slicker', 'ok why would you say that to me', 'it doesn\'t matter', 'are you sure about that', 'don\'t']
     tagged_user = ''
     full_response = ''
 
@@ -49,16 +49,23 @@ def analyze_message(sender, received_message, message_attachment) -> str:
 
         else:
             incl_tag = False
+            respond_chance = [0, 1, 2, 3, 4, 5, 6]
             if 'smash' in received_message:
                 smash_responses = ['I\'ll have you know, my wii fit is ranked', 'melee bad', 'i only play brawl', 'you don\'t even know how to wavedash']
-                full_response = random.choice(smash_responses)
+                will_respond = random.choice(respond_chance)
+                if will_respond == 2:
+                    full_response = random.choice(smash_responses)
 
             if 'hang' in received_message:
                 hang_responses = ['jazz game', 'effing snales', 'gimme 20', 'i\'ll be there in an hour and a half', 'nah i can\'t hang i have weener stuff to be doing instead', 'will there be girls?']
-                full_response = random.choice(hang_responses)
+                will_respond = random.choice(respond_chance)
+                if will_respond == 2:
+                    full_response = random.choice(hang_responses)
             if 'car' in received_message:
                 car_response = ['i used to have a car, but i crashed it on the information highway', 'bro i\'m a biker', 'i actually have a turbo in my transmission', 'i can only drive automatics']
-                full_response = random.choice(car_response)
+                will_respond = random.choice(respond_chance)
+                if will_respond == 2:
+                    full_response = random.choice(car_response)
 
         if incl_tag:
             return tagged_user + full_response
