@@ -82,7 +82,7 @@ def analyze_message(sender, received_message, message_attachment) -> str:
 
 def add_nickname(name_to_nick) -> str:
     nick = name_to_nick
-    with open('nicknames/' + name_to_nick + '.txt', 'w') as nickname_file:
+    with open('nicknames/' + nick + '.txt', 'w') as nickname_file:
         nick = generate_nickname(name_to_nick)
         nickname_file.write(nick)
         return nick
@@ -133,6 +133,7 @@ def get_latest_message_id() -> str:
 
 # TODO: move message sender test to analyze_message, put message id update there too
 
+
 while True:
     request_params['since_id'] = get_latest_message_id()
     response_page = requests.get('https://api.groupme.com/v3/groups/35396592/messages', params=request_params)
@@ -150,9 +151,9 @@ while True:
                     # send response to the group
                     post_params = {'bot_id': '9ac5c52ec5efaee1bce225eb92', 'text': to_send}
                     requests.post('https://api.groupme.com/v3/bots/post', params=post_params)
-                    print('MESSAGE SENT SUCCESSFULLY | ', to_send)
+                    print('MESSAGE SENT SUCCESSFULLY:   ', to_send)
                     break
-            request_params['since_id'] = update_message_index(message)
+        request_params['since_id'] = update_message_index(message)
     time.sleep(5)
 
 
