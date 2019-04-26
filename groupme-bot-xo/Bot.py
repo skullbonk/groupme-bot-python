@@ -24,13 +24,12 @@ def analyze_message(sender, received_message, message_attachment) -> str:
         if 'xo' in received_message:
             tagged_user = '@' + get_nickname(sender) + ' '
             incl_tag = True
-            if 'fake' in received_message:
-                if 'not fake' in received_message or 'isn\'t fake' in received_message:
-                    full_response = tagged_user + 'yeye'
-                else:
-                    full_response = tagged_user + 'bet'
-
-            if 'nickname' in received_message:
+    # madlibs
+            if 'mad libs' or 'madlibs' in received_message:
+                incl_tag = False
+                full_response = madlibs()
+    # nicknames
+            elif 'nickname' in received_message:
                 incl_tag = False
                 for member in member_list:
                     if member in received_message:
@@ -39,10 +38,16 @@ def analyze_message(sender, received_message, message_attachment) -> str:
                         name_to_nick = sender
 
                 if 'change' or 'set' or 'give' or 'new' in received_message:
-                    full_response = name_to_nick + '\'s nickname is now ' + add_nickname(name_to_nick)
+                    full_response = name_to_nick + '\'s nickname is now \n' + add_nickname(name_to_nick)
 
                 elif 'what' and not 'new' in received_message:
                     full_response = name_to_nick + '\'s nickname is ' + get_nickname(name_to_nick)
+    # xo is not fake
+            elif 'fake' in received_message:
+                if 'not fake' in received_message or 'isn\'t fake' in received_message:
+                    full_response = tagged_user + 'yeye'
+                else:
+                    full_response = tagged_user + 'bet'
 
             else:
                 full_response = random.choice(generic_responses)
@@ -51,18 +56,17 @@ def analyze_message(sender, received_message, message_attachment) -> str:
             incl_tag = False
             respond_chance = [0, 1, 2, 3, 4, 5, 6]
             if 'smash' in received_message:
-                smash_responses = ['I\'ll have you know, my wii fit is ranked', 'melee bad', 'i only play brawl', 'you don\'t even know how to wavedash']
+                smash_responses = ['I\'ll have you know, my wii fit is ranked', 'melee bad', 'i only play brawl', 'you don\'t even know how to wavedash', 'forward aerial']
                 will_respond = random.choice(respond_chance)
                 if will_respond == 2:
                     full_response = random.choice(smash_responses)
-
-            if 'hang' in received_message:
+            elif 'hang' in received_message:
                 hang_responses = ['jazz game', 'effing snales', 'gimme 20', 'i\'ll be there in an hour and a half', 'nah i can\'t hang i have weener stuff to be doing instead', 'will there be girls?']
                 will_respond = random.choice(respond_chance)
                 if will_respond == 2:
                     full_response = random.choice(hang_responses)
-            if 'car' in received_message:
-                car_response = ['i used to have a car, but i crashed it on the information highway', 'bro i\'m a biker', 'i actually have a turbo in my transmission', 'i can only drive automatics']
+            elif 'car' in received_message:
+                car_response = ['automatic is better don\'t @ me\n get fricked you couldn\'t @ me if you wanted to']
                 will_respond = random.choice(respond_chance)
                 if will_respond == 2:
                     full_response = random.choice(car_response)
@@ -134,6 +138,28 @@ def get_latest_message_id() -> str:
 # TODO: move message sender test to analyze_message, put message id update there too
 
 
+def madlibs() -> str:
+    prompt = 'ok bud you\'ve activated mad libs. ' \
+             ''
+    nouns = ['']
+    names = ['']
+    places = ['']
+    objects = ['']
+    verbs = ['']
+    adjectives = ['']
+
+    if nouns and names and places and objects and verbs and adjectives:
+        return 'There once was a ' + random.choice(nouns)
+
+
+def send(message_text):
+    post_params = {'bot_id': '9ac5c52ec5efaee1bce225eb92', 'text': message_text}
+    requests.post('https://api.groupme.com/v3/bots/post', params=post_params)
+
+
+# def update_message_list:
+
+
 while True:
     request_params['since_id'] = get_latest_message_id()
     response_page = requests.get('https://api.groupme.com/v3/groups/35396592/messages', params=request_params)
@@ -143,7 +169,7 @@ while True:
             message_sender = message['name']
             latest_message = message['text']
             message_attachment = message['attachments']
-            print(message['name'], ': ', message['text'], '| ', message['id'])
+            print(message['name'], ': ', message['text'])
 
             if message_sender in member_list:
                 to_send = analyze_message(message_sender, latest_message, message_attachment)
@@ -151,7 +177,6 @@ while True:
                     # send response to the group
                     post_params = {'bot_id': '9ac5c52ec5efaee1bce225eb92', 'text': to_send}
                     requests.post('https://api.groupme.com/v3/bots/post', params=post_params)
-                    print('MESSAGE SENT SUCCESSFULLY:   ', to_send)
                     break
         request_params['since_id'] = update_message_index(message)
     time.sleep(5)

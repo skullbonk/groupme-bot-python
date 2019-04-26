@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ecd96e-5e66-488a-a374-bcf1dd956fa1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/groupme-bot-xo/Bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupme-bot-xo/Bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupme-bot-xo/mostrecentmessage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/groupme-bot-xo/mostrecentmessage.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupme-bot-xo/nicknames/chonk.txt" beforeDir="false" afterPath="$PROJECT_DIR$/groupme-bot-xo/nicknames/chonk.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,10 +17,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/groupme-bot-xo/Bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="746">
-              <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
+            <state relative-caret-position="347">
+              <caret line="74" column="46" lean-forward="true" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
               <folding>
                 <element signature="e#52#65#0" expanded="true" />
+                <element signature="e#3532#3727#0" />
+                <element signature="e#3778#4767#0" />
+                <element signature="e#4807#5006#0" />
+                <element signature="e#5055#5209#0" />
+                <element signature="e#5252#5361#0" />
               </folding>
             </state>
           </provider>
@@ -105,7 +111,22 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="groupme-bot-python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="groupme-bot-python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="groupme-bot-python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="groupme-bot-python" type="462c0819:PsiDirectoryNode" />
+              <item name="groupme-bot-xo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -184,7 +205,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26940134" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26893523" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991131" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -208,10 +229,15 @@
     <entry file="file://$PROJECT_DIR$/groupme-bot-xo/nicknames/chonk" />
     <entry file="file://$PROJECT_DIR$/groupme-bot-xo/Bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
+        <state relative-caret-position="347">
+          <caret line="74" column="46" lean-forward="true" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
           <folding>
             <element signature="e#52#65#0" expanded="true" />
+            <element signature="e#3532#3727#0" />
+            <element signature="e#3778#4767#0" />
+            <element signature="e#4807#5006#0" />
+            <element signature="e#5055#5209#0" />
+            <element signature="e#5252#5361#0" />
           </folding>
         </state>
       </provider>
